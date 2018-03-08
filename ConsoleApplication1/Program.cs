@@ -45,8 +45,7 @@ namespace ConsoleApplication1
         public static int[] QuickSort(int[] arr)
         {
             var l = new List<int>(arr);
-            Task<List<int>> t = (arr.Length < 3) ? CheckArray(l) : QuickSort_Main(l);
-            return t.Result.ToArray();
+            return  ((arr.Length < 3) ? CheckArray(l) : QuickSort_Main(l)).Result.ToArray();
         }
 
         public static int[] GenerateRandomArray()
